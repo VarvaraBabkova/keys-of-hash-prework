@@ -1,7 +1,13 @@
 class Hash
   def keys_of(*arguments)
-    arguments.each do |key|
-      
+    ar = []
+    arguments.each do |arg|
+      this.each do |key, value|
+        if value == arg
+          ar.push(key)
+        end
+      end
     end
+    return ar
   end
 end
